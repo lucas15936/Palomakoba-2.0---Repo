@@ -1,0 +1,54 @@
+package MyPackage;
+
+public class Comissioned extends Employee {
+	public double grossSales;
+	private double comissionFee;
+	private double bonus;
+	
+	public double calculateSalary() {
+		return ((grossSales * comissionFee) + bonus);
+	}
+	
+	
+	
+	
+	
+	public Comissioned(String name, String dept, double grossSales, double comissionFee, double bonus) {
+		super(name, dept);
+		this.grossSales = grossSales;
+		this.comissionFee = comissionFee;
+		this.bonus = bonus;
+	}
+
+	public double getGrossSales() {
+		return grossSales;
+	}
+
+	public void setGrossSales(double grossSales) {
+		this.grossSales = grossSales;
+	}
+
+	public double getComissionFee() {
+		return comissionFee;
+	}
+
+	public void setComissionFee(double comissionFee) {
+		this.comissionFee = comissionFee;
+	}
+
+	public double getBonus() {
+		return bonus;
+	}
+
+	public void setBonus(double bonus) {
+		this.bonus = bonus;
+	}
+
+	@Override
+	public String toString() {
+		return "Comissionado [" + super.toString() + "vendas brutas=" + grossSales + ", taxa de comissão=" + comissionFee + ", bônus=" + bonus + "]";
+	}
+	
+	
+
+}
